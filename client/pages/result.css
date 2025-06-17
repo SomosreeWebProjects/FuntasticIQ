@@ -1,0 +1,179 @@
+.result-container {
+  text-align: center;
+  background: white;
+  padding: 50px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  margin-top: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Poppins", sans-serif;
+}
+
+.result-container h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.player-scores {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.player-score-card {
+  background: #f8f9fa;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 10px;
+  width: 80%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.player-score-card h3 {
+  margin: 5px 0;
+  color: #2c3e50;
+}
+
+.result-container button {
+  background: #ff6b6b;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  margin-top: 20px;
+}
+
+.result-container button:hover {
+  background: #ff4757;
+}
+
+.multiplayer-result {
+  background: #fff;
+  padding: 40px;
+  margin: 80px auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.multiplayer-title {
+  font-size: 30px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.player-status {
+  margin-bottom: 25px;
+}
+
+.player-outcome {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.player-score {
+  font-size: 18px;
+  color: #444;
+}
+
+.all-players {
+  margin-top: 20px;
+}
+
+.players-list {
+  list-style: none;
+  padding: 0;
+}
+
+.player-item {
+  background: #f0f0f0;
+  margin: 8px 0;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.back-button {
+  margin-top: 25px;
+  background: #950e1d;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.floating-icons-result {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none; /* So icons don't block clicks */
+  z-index: 0;
+}
+
+.floating-icons-result .icon-result {
+  position: absolute;
+  font-size: 2rem;
+  animation: float 7s infinite alternate;
+  cursor: pointer; /* Added for interactivity */
+  opacity: 0.6;
+}
+
+.floating-icons-result .icon-result:hover {
+  transform: translateY(-10px) scale(1.2); /* Icon enlarges when hovered */
+  opacity: 1; /* Full opacity on hover */
+}
+
+@keyframes float {
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(180deg); }
+  75% { transform: translateY(-20px) rotate(270deg); }
+  90% { transform: translateY(-25px) rotate(360deg); }
+  100% { transform: translateY(-30px) rotate(360deg); }
+}
+
+
+.floating-icons-result .icon-result:nth-child(1) { top: 10%; left: 20%; animation-delay: 0s; }
+.floating-icons-result .icon-result:nth-child(2) { top: 30%; left: 70%; animation-delay: 1s; }
+.floating-icons-result .icon-result:nth-child(3) { top: 50%; left: 10%; animation-delay: 2s; }
+.floating-icons-result .icon-result:nth-child(4) { top: 70%; left: 40%; animation-delay: 3s; }
+.floating-icons-result .icon-result:nth-child(5) { top: 20%; left: 90%; animation-delay: 4s; }
+.floating-icons-result .icon-result:nth-child(6) { top: 40%; left: 60%; animation-delay: 5s; }
+.floating-icons-result .icon-result:nth-child(7) { top: 60%; left: 15%; animation-delay: 6s; }
+.floating-icons-result .icon-result:nth-child(8) { top: 80%; left: 50%; animation-delay: 7s; }
+.floating-icons-result .icon-result:nth-child(9) { top: 90%; left: 80%; animation-delay: 8s; }
+.floating-icons-result .icon-result:nth-child(10) { top: 15%; left: 5%; animation-delay: 9s; }
+.floating-icons-result .icon-result:nth-child(11) { top: 25%; left: 30%; animation-delay: 10s; }
+.floating-icons-result .icon-result:nth-child(12) { top: 35%; left: 80%; animation-delay: 11s; }
+.floating-icons-result .icon-result:nth-child(13) { top: 45%; left: 25%; animation-delay: 12s; }
+.floating-icons-result .icon-result:nth-child(14) { top: 55%; left: 75%; animation-delay: 13s; }
+.floating-icons-result .icon-result:nth-child(15) { top: 65%; left: 20%; animation-delay: 14s; }
+.floating-icons-result .icon-result:nth-child(16) { top: 75%; left: 70%; animation-delay: 15s; }
+.floating-icons-result .icon-result:nth-child(17) { top: 85%; left: 15%; animation-delay: 16s; }
+.floating-icons-result .icon-result:nth-child(18) { top: 95%; left: 65%; animation-delay: 17s; }
+.floating-icons-result .icon-result:nth-child(19) { top: 5%; left: 55%; animation-delay: 18s; }
+.floating-icons-result .icon-result:nth-child(20) { top: 15%; left: 45%; animation-delay: 19s; }
+.floating-icons-result .icon-result:nth-child(21) { top: 25%; left: 35%; animation-delay: 20s; }
+
+.result-video {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 15px;
+  margin: 20px 0;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}

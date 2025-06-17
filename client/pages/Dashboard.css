@@ -1,0 +1,336 @@
+body, html {
+  overflow: auto; /* Ensure scrolling */
+  height: 100%; /* Allow full page height */
+  overflow-y: auto;
+}
+
+.dashboard-container {
+  background: linear-gradient(135deg, #70d6ff, #ff70a6, #ff9770, #ffd670, #e9ff70);
+  font-family: Arial, sans-serif;
+  text-align: center;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100vh; /* or whatever total height you need */
+  position: relative;
+  animation: pastelGradientAnimation 10s ease infinite;
+  background-size: 400% 400%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 2;
+    
+}
+
+@keyframes pastelGradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.dashboard-blur-wrapper.blurred {
+  filter: blur(5px);
+  transition: filter 0.3s ease;
+}
+
+.dashboard-blur-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: filter 0.3s ease;
+}
+
+.dashboard-header {
+  align-self: flex-start; /* Align to the left */
+  text-align: left;
+  color: #283618;
+  margin-bottom: 50px;
+  font-size: 24px;
+  font-weight: bold;
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin-top: 5rem;
+  margin-left: 5px;
+  animation: slideFade 1s ease-out forwards;
+}
+
+@keyframes slideFade {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dashboard-header p {
+  font-size: 16px;
+  font-style: italic;
+  color: #283618;
+}
+
+.dashboard-header h1 span {
+  display: inline-block;
+  animation: waveHand 2s infinite;
+  transform-origin: 70% 70%;
+}
+
+@keyframes waveHand {
+  0% { transform: rotate(0deg); }
+  15% { transform: rotate(14deg); }
+  30% { transform: rotate(-8deg); }
+  45% { transform: rotate(14deg); }
+  60% { transform: rotate(-4deg); }
+  75% { transform: rotate(10deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.quiz-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 110%;
+  margin-top: 70px; /* Ensure it doesn't overlap stats */
+  padding-bottom: 50px; /* Prevent content from pushing stats out of view */
+}
+
+.quiz-card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  text-align: center;
+  width: 250px;
+  animation: fadeInUp 0.8s ease forwards;
+  opacity: 0; /* So the fade in works */
+}
+
+.quiz-card h3 {
+  color: #283618;
+  font-weight: bolder;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.quiz-card.animate-in {
+  animation: slideBlurIn 0.8s ease-out forwards;
+}
+
+
+.quiz-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.quiz-icon {
+  display: block;
+  margin: 0 auto; /* Centers the image horizontally */
+  width: 100px;  /* Adjust width */
+  height: 100px; /* Adjust height */
+  object-fit: contain; /* Ensures the full image is visible */
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+@keyframes slideBlurIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) scale(0.9);
+    filter: blur(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+
+.start-btn {
+  display: inline-block;
+  background-color: #ff6b6b;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.start-btn:hover {
+  background-color: #ff4757;
+  transform: scale(1.03);
+}
+
+.search-container {
+  margin: 30px 0 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 90px; /* Adjust to position above the header */
+  left: 400px;
+  opacity: 0; /* Start hidden */
+  animation: fadeInUp 1s forwards; /* Apply animation */
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Start from below */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End at the normal position */
+  }
+}
+
+.search-input {
+  width: 60%;
+  max-width: 500px;
+  padding: 14px 20px 14px 60px; /* Left padding for icon space */
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  background-color: #fffaf8;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+  color: #333;
+}
+
+.search-input:focus {
+  background-color: #ffffff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transform: scale(1.02);
+}
+
+.search-icon {
+  position: absolute;
+  left: 440px; /* Adjusts based on input width */
+  top: 10px;
+  bottom: 50px;
+  transform: translateY(-50%);
+  font-size: 25px;
+  color: #999;
+  pointer-events: none;
+}
+
+.search-dropdown {
+  position: absolute;
+  top: 180px; /* Adjust based on your search box position */
+  left: 830px;
+  width: 60%;
+  max-width: 500px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  z-index: 10;
+  padding: 10px 0;
+  animation: fadeInUp 0.3s ease;
+}
+
+.search-dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  color: #333;
+  transition: background 0.2s;
+}
+
+.search-dropdown-item:hover {
+  background-color: #f3f3f3;
+}
+
+.search-dropdown-item.no-results {
+  justify-content: center;
+  font-style: italic;
+  color: #888;
+}
+
+.dropdown-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+
+.footer-dashboard {
+  position: absolute;
+  bottom: -650px;
+  height: 50px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2); /* Frosted glass effect */
+  backdrop-filter: blur(10px);
+  text-align: center;
+  font-size: 1.2rem;
+  color: #283618;
+  font-weight: bolder;
+  padding-top: 10px;
+  border-top: thistle solid 1px;
+}
+
+.floating-icons-dashboard {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none; /* So icons don't block clicks */
+  z-index: 0;
+}
+
+.floating-icons-dashboard .icon-dashboard {
+  position: absolute;
+  font-size: 2rem;
+  animation: float 7s infinite alternate;
+  opacity: 0.6;
+}
+
+@keyframes float {
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(180deg); }
+  75% { transform: translateY(-20px) rotate(270deg); }
+  90% { transform: translateY(-25px) rotate(360deg); }
+  100% { transform: translateY(-30px) rotate(360deg); }
+}
+
+
+.floating-icons-dashboard .icon-dashboard:nth-child(1) { top: 10%; left: 20%; animation-delay: 0s; }
+.floating-icons-dashboard .icon-dashboard:nth-child(2) { top: 30%; left: 70%; animation-delay: 1s; }
+.floating-icons-dashboard .icon-dashboard:nth-child(3) { top: 50%; left: 10%; animation-delay: 2s; }
+.floating-icons-dashboard .icon-dashboard:nth-child(4) { top: 70%; left: 40%; animation-delay: 3s; }
+.floating-icons-dashboard .icon-dashboard:nth-child(5) { top: 20%; left: 90%; animation-delay: 4s; }
+.floating-icons-dashboard .icon-dashboard:nth-child(6) { top: 40%; left: 60%; animation-delay: 5s; }
+.floating-icons-dashboard .icon-dashboard:nth-child(7) { top: 60%; left: 15%; animation-delay: 6s; }
+.floating-icons-dashboard .icon-dashboard:nth-child(8) { top: 80%; left: 50%; animation-delay: 7s; }
+.floating-icons-dashboard .icon-dashboard:nth-child(9) { top: 90%; left: 80%; animation-delay: 8s; }
+.floating-icons-dashboard .icon-dashboard:nth-child(10) { top: 15%; left: 5%; animation-delay: 9s; }
+.floating-icons-dashboard .icon-dashboard:nth-child(11) { top: 25%; left: 30%; animation-delay: 10s; }
+.floating-icons-dashboard .icon-dashboard:nth-child(12) { top: 35%; left: 80%; animation-delay: 11s; }
+.floating-icons-dashboard .icon-dashboard:nth-child(13) { top: 45%; left: 25%; animation-delay: 12s; }
+.floating-icons-dashboard .icon-dashboard:nth-child(14) { top: 55%; left: 75%; animation-delay: 13s; }
+.floating-icons-dashboard .icon-dashboard:nth-child(15) { top: 65%; left: 20%; animation-delay: 14s; }
+.floating-icons-dashboard .icon-dashboard:nth-child(16) { top: 75%; left: 70%; animation-delay: 15s; }
+.floating-icons-dashboard .icon-dashboard:nth-child(17) { top: 85%; left: 15%; animation-delay: 16s; }
+.floating-icons-dashboard .icon-dashboard:nth-child(18) { top: 95%; left: 65%; animation-delay: 17s; }
+.floating-icons-dashboard .icon-dashboard:nth-child(19) { top: 5%; left: 55%; animation-delay: 18s; }
+.floating-icons-dashboard .icon-dashboard:nth-child(20) { top: 15%; left: 45%; animation-delay: 19s; }
+.floating-icons-dashboard .icon-dashboard:nth-child(21) { top: 25%; left: 35%; animation-delay: 20s; }

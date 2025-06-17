@@ -1,0 +1,152 @@
+.edit-profile {
+  min-height: 100vh; /* 🟢 ensures full height */
+  width: 100%;
+  background: linear-gradient(135deg, #70d6ff, #ff70a6, #ff9770, #ffd670, #e9ff70);
+  background-size: 400% 400%;
+  animation: pastelGradientAnimation 10s ease infinite;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.edit-profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 150px;
+  width: 100%;
+}
+
+
+
+  @keyframes pastelGradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .edit-profile-form {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    animation: slideFade 1s ease-out forwards;
+  }
+
+  @keyframes slideFade {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .edit-profile-form h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 24px;
+    color: #283618;
+    font-weight: bolder;
+  }
+  
+  .edit-profile-form input {
+    margin-bottom: 15px;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    color: #283618;
+    font-size: medium;
+    font-weight: bold;
+  }
+  
+  .edit-profile-form button {
+    background-color: #ff6b6b;;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .edit-profile-form button:hover {
+    background-color: #ff4757;
+  }
+.saved-message {
+  margin-top: 10px;
+  color: green;
+  font-weight: bold;
+  text-align: center;
+  animation: fadeInOut 3s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.floating-icons-dashboard {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none; /* So icons don't block clicks */
+  z-index: 0;
+}
+
+.floating-icons-editprofile .icon-editprofile {
+  position: absolute;
+  font-size: 2rem;
+  animation: float 7s infinite alternate;
+  opacity: 0.6;
+}
+
+@keyframes float {
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(180deg); }
+  75% { transform: translateY(-20px) rotate(270deg); }
+  90% { transform: translateY(-25px) rotate(360deg); }
+  100% { transform: translateY(-30px) rotate(360deg); }
+}
+
+
+.floating-icons-editprofile .icon-editprofile:nth-child(1) { top: 10%; left: 20%; animation-delay: 0s; }
+.floating-icons-editprofile .icon-editprofile:nth-child(2) { top: 30%; left: 70%; animation-delay: 1s; }
+.floating-icons-editprofile .icon-editprofile:nth-child(3) { top: 50%; left: 10%; animation-delay: 2s; }
+.floating-icons-editprofile .icon-editprofile:nth-child(4) { top: 70%; left: 40%; animation-delay: 3s; }
+.floating-icons-editprofile .icon-editprofile:nth-child(5) { top: 20%; left: 90%; animation-delay: 4s; }
+.floating-icons-editprofile .icon-editprofile:nth-child(6) { top: 40%; left: 60%; animation-delay: 5s; }
+.floating-icons-editprofile .icon-editprofile:nth-child(7) { top: 60%; left: 15%; animation-delay: 6s; }
+.floating-icons-editprofile .icon-editprofile:nth-child(8) { top: 80%; left: 50%; animation-delay: 7s; }
+.floating-icons-editprofile .icon-editprofile:nth-child(9) { top: 90%; left: 80%; animation-delay: 8s; }
+.floating-icons-editprofile .icon-editprofile:nth-child(10) { top: 15%; left: 5%; animation-delay: 9s; }
+.floating-icons-editprofile .icon-editprofile:nth-child(11) { top: 25%; left: 30%; animation-delay: 10s; }
+.floating-icons-editprofile .icon-editprofile:nth-child(12) { top: 35%; left: 80%; animation-delay: 11s; }
+.floating-icons-editprofile .icon-editprofile:nth-child(13) { top: 45%; left: 25%; animation-delay: 12s; }
+.floating-icons-editprofile .icon-editprofile:nth-child(14) { top: 55%; left: 75%; animation-delay: 13s; }
+.floating-icons-editprofile .icon-editprofile:nth-child(15) { top: 65%; left: 20%; animation-delay: 14s; }
+.floating-icons-editprofile .icon-editprofile:nth-child(16) { top: 75%; left: 70%; animation-delay: 15s; }
+.floating-icons-editprofile .icon-editprofile:nth-child(17) { top: 85%; left: 15%; animation-delay: 16s; }
+.floating-icons-editprofile .icon-editprofile:nth-child(18) { top: 95%; left: 65%; animation-delay: 17s; }
+.floating-icons-editprofile .icon-editprofile:nth-child(19) { top: 5%; left: 55%; animation-delay: 18s; }
+.floating-icons-editprofile .icon-editprofile:nth-child(20) { top: 15%; left: 45%; animation-delay: 19s; }
+.floating-icons-editprofile .icon-editprofile:nth-child(21) { top: 25%; left: 35%; animation-delay: 20s; }

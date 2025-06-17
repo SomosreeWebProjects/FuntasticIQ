@@ -1,0 +1,87 @@
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* General Navbar Styling */
+.dashboard-navbar {
+    background-color: #EFF7F6;
+    padding: 2.1rem 3rem;
+    color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: fixed; /* Change to fixed */
+    top: 0;
+    left: 0;
+    z-index: 10;
+    height: 75px;
+}
+
+/* Navbar content */
+.dashboard-nav-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+}
+
+/* Brand Name */
+.dashboard-brand h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #D72638;
+    margin: 0;
+}
+
+.dashboard-tagline{
+    font-size: 0.9rem;
+    color: #444;
+    font-weight: bold;
+    margin-top: 0.25rem;
+    font-style: italic;
+    padding-right: 43px;
+}
+
+/* Navigation Menu */
+.dashboard-nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 1.2rem;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+/* Navigation Links */
+.dashboard-nav-menu .nav-link {
+    text-decoration: none;
+    color: #D72638;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.dashboard-nav-menu .nav-link:hover {
+    color: #FF7600;
+}
+
+/* Logout Button */
+.nav-button {
+    background-color: #FF7600;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #D72638;
+}
+  
