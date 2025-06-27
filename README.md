@@ -49,7 +49,7 @@ FuntasticIQ is a MERN stack-based quiz application where users can:
 
 ### 📂 Clone the Repository
 
-git clone https://github.com/SomosreeWebProjects/FuntasticIQ
+git clone https://github.com/SomosreeWebProjects/FuntasticIQ.git
 
 cd FuntasticIQ
 
